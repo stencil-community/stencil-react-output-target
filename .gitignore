@@ -1,0 +1,7 @@
+# Dependencies
+node_modules
+.pnpm-debug.log
+.turbo
+
+# Misc
+.DS_Store
