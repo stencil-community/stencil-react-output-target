@@ -4,6 +4,7 @@ import type {
   OutputTargetDistCustomElements,
   BuildCtx,
   CompilerCtx,
+  OutputTarget,
 } from "@stencil/core/internal";
 import { Project, VariableDeclarationKind } from "ts-morph";
 
@@ -20,7 +21,9 @@ interface ReactEvent {
   type: string;
 }
 
-export const reactOutputTarget = ({ outputPath }: ReactOutputTargetOptions) => {
+export const reactOutputTarget = ({
+  outputPath,
+}: ReactOutputTargetOptions): OutputTarget => {
   let customElementsDir = "dist/components";
 
   let stencilPackageName: string;
