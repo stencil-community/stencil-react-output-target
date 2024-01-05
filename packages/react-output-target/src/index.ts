@@ -32,6 +32,12 @@ export const reactOutputTarget = ({
     type: 'custom',
     name: 'react-output-target',
     validate(config: Config) {
+      if (!outputPath.endsWith('.ts') && !outputPath.endsWith('.tsx')) {
+        throw new Error(
+          `The 'react-output-target' currently only supports .ts and .tsx output files. Please change the 'outputPath' config to end with .ts or .tsx.`,
+        );
+      }
+
       const customElementsOutputTarget = (config.outputTargets || []).find(
         (o) => o.type === 'dist-custom-elements',
       ) as OutputTargetDistCustomElements;
@@ -58,7 +64,7 @@ export const reactOutputTarget = ({
       if (!stencilPackageName) {
         throw new Error(
           'Unable to find the package name in the package.json file: ' +
-          config.packageJsonFilePath,
+            config.packageJsonFilePath,
         );
       }
     },
@@ -169,8 +175,8 @@ const createComponent = <T extends HTMLElement, E extends Record<string, EventNa
               elementClass: ${componentElement},
               react: React,
               events: { ${events
-                  .map((e) => `${e.name}: '${e.originalName}'`)
-                  .join(',\n')}} as ${componentEventNamesType},
+                .map((e) => `${e.name}: '${e.originalName}'`)
+                .join(',\n')}} as ${componentEventNamesType},
               defineCustomElement: define${reactTagName}
             })`,
             },
