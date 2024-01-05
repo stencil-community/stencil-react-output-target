@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#">
-    <img alt="Stencil React Output Target" src="https://github.com/sean-perkins/stencil-react-output-target/blob/main/.github/logo.png?raw=true" width="84" />
+    <img alt="Stencil React Output Target" src="https://github.com/stencil-community/stencil-react-output-target/blob/main/.github/logo.png?raw=true" width="84" />
   </a>
 </p>
 
