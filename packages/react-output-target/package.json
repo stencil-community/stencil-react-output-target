@@ -4,7 +4,6 @@
   "description": "React component wrappers for Stencil web components",
   "license": "MIT",
   "homepage": "https://github.com/stencil-community/stencil-react-output-target",
-
   "repository": {
     "type": "git",
     "url": "https://github.com/stencil-community/stencil-react-output-target",
