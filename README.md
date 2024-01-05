@@ -21,9 +21,11 @@ This package makes use of the [`@lit/react`](https://www.npmjs.com/package/@lit/
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
 </p>
 
-- ♾️ **Interoperability**: Enables seamless integration of Stencil components in React applications.
-- 📦 **Consistency**: Provides a consistent developer experience for teams working with both Stencil and React.
-- ♻️ **Reusability**: Write once in Stencil, and use across different frameworks.
+♾️ **Interoperability**: Enables seamless integration of Stencil components in React applications.
+
+📦 **Consistency**: Provides a consistent developer experience for teams working with both Stencil and React.
+
+♻️ **Reusability**: Write once in Stencil, and use across different frameworks.
 
 ## Installation
 
