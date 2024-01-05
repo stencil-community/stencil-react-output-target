@@ -1,4 +1,4 @@
-import { dashToPascalCase, eventListenerName } from './utils/string-utils';
+import { kebabToPascalCase, eventListenerName } from './utils/string-utils';
 import type {
   Config,
   OutputTargetDistCustomElements,
@@ -58,7 +58,7 @@ export const reactOutputTarget = ({
       if (!stencilPackageName) {
         throw new Error(
           'Unable to find the package name in the package.json file: ' +
-            config.packageJsonFilePath,
+          config.packageJsonFilePath,
         );
       }
     },
@@ -86,7 +86,7 @@ const createComponent = <T extends HTMLElement, E extends Record<string, EventNa
 
       for (const component of components) {
         const tagName = component.tagName;
-        const reactTagName = dashToPascalCase(tagName);
+        const reactTagName = kebabToPascalCase(tagName);
         const componentElement = `${reactTagName}Element`;
         const componentCustomEvent = `${reactTagName}CustomEvent`;
 
@@ -169,8 +169,8 @@ const createComponent = <T extends HTMLElement, E extends Record<string, EventNa
               elementClass: ${componentElement},
               react: React,
               events: { ${events
-                .map((e) => `${e.name}: '${e.originalName}'`)
-                .join(',\n')}} as ${componentEventNamesType},
+                  .map((e) => `${e.name}: '${e.originalName}'`)
+                  .join(',\n')}} as ${componentEventNamesType},
               defineCustomElement: define${reactTagName}
             })`,
             },
