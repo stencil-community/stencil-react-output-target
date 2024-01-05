@@ -90,7 +90,7 @@ importers:
   packages/stencil-demo:
     dependencies:
       '@stencil/core':
-        specifier: ^4.7.0
+        specifier: ^4.9.0
         version: 4.9.0
     devDependencies:
       '@stencil-community/react-output-target':
