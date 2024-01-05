@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@stencil/core": "^4.9.0",
+    "ts-dedent": "^2.2.0",
     "ts-morph": "^21.0.1",
     "typescript": "~5.2.2",
     "vite": "^5.0.0",
