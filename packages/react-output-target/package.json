@@ -1,6 +1,6 @@
 {
   "name": "@stencil-community/react-output-target",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React component wrappers for Stencil web components",
   "license": "MIT",
   "homepage": "https://github.com/stencil-community/stencil-react-output-target",
