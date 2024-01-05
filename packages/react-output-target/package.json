@@ -1,6 +1,9 @@
 {
   "name": "@stencil-community/react-output-target",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "license": "MIT",
+  "homepage": "https://github.com/stencil-community/stencil-react-output-target#README",
+  "author": "Sean Perkins <sean@ionic.io>",
   "scripts": {
     "dev": "vite",
     "build": "vite build && vue-tsc --emitDeclarationOnly && cp ../../README.md dist/README.md",
@@ -29,5 +32,10 @@
       "import": "./dist/stencil-react-output-target.es.js",
       "require": "./dist/stencil-react-output-target.umd.js"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stencil-community/stencil-react-output-target",
+    "directory": "packages/react-output-target"
   }
 }
