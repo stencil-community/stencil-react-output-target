@@ -68,15 +68,18 @@ importers:
       "@stencil/core":
         specifier: ^4.9.0
         version: 4.9.0
+      ts-morph:
+        specifier: ^21.0.1
+        version: 21.0.1
       typescript:
-        specifier: ^5.0.0
-        version: 5.3.3
+        specifier: ~5.2.2
+        version: 5.2.2
       vite:
         specifier: ^5.0.0
         version: 5.0.10
       vue-tsc:
         specifier: ^1.8.27
-        version: 1.8.27(typescript@5.3.3)
+        version: 1.8.27(typescript@5.2.2)
 
   packages/stencil-demo:
     dependencies:
@@ -1752,6 +1755,18 @@ packages:
     engines: { node: ">=16.0.0", npm: ">=7.10.0" }
     hasBin: true
 
+  /@ts-morph/common@0.22.0:
+    resolution:
+      {
+        integrity: sha512-HqNBuV/oIlMKdkLshXd1zKBqNQCsuPEsgQOkfFQ/eUKjRlwndXW1AjN9LVkBEIukm00gGXSRmfkl0Wv5VXLnlw==,
+      }
+    dependencies:
+      fast-glob: 3.3.2
+      minimatch: 9.0.3
+      mkdirp: 3.0.1
+      path-browserify: 1.0.1
+    dev: true
+
   /@types/babel__core@7.20.5:
     resolution:
       {
@@ -2169,7 +2184,7 @@ packages:
       "@vue/shared": 3.4.5
     dev: true
 
-  /@vue/language-core@1.8.27(typescript@5.3.3):
+  /@vue/language-core@1.8.27(typescript@5.2.2):
     resolution:
       {
         integrity: sha512-L8Kc27VdQserNaCUNiSFdDl9LWT24ly8Hpwf1ECy3aFb9m6bDhBGQYOujDm21N7EW3moKIOKEanQwe1q5BK+mA==,
@@ -2188,7 +2203,7 @@ packages:
       minimatch: 9.0.3
       muggle-string: 0.3.1
       path-browserify: 1.0.1
-      typescript: 5.3.3
+      typescript: 5.2.2
       vue-template-compiler: 2.7.16
     dev: true
 
@@ -2691,6 +2706,13 @@ packages:
         integrity: sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==,
       }
     engines: { iojs: ">= 1.0.0", node: ">= 0.12.0" }
+    dev: true
+
+  /code-block-writer@12.0.0:
+    resolution:
+      {
+        integrity: sha512-q4dMFMlXtKR3XNBHyMHt/3pwYNA69EDk00lloMOaaUMKPUXBw6lpXtbu3MMVG6/uOihGnRDOlkyqsONEUj60+w==,
+      }
     dev: true
 
   /collect-v8-coverage@1.0.2:
@@ -5128,6 +5150,15 @@ packages:
     engines: { node: ">= 8.0.0" }
     dev: true
 
+  /mkdirp@3.0.1:
+    resolution:
+      {
+        integrity: sha512-+NsyUUAZDmo6YVHzL/stxSu3t9YS1iljliy3BSDrXJ/dkn1KYdmtZODGGjLcc9XLgVVpH4KshHB8XmZgMhaBXg==,
+      }
+    engines: { node: ">=10" }
+    hasBin: true
+    dev: true
+
   /ms@2.1.2:
     resolution:
       {
@@ -6293,6 +6324,16 @@ packages:
       typescript: 5.3.3
     dev: true
 
+  /ts-morph@21.0.1:
+    resolution:
+      {
+        integrity: sha512-dbDtVdEAncKctzrVZ+Nr7kHpHkv+0JDJb2MjjpBaj8bFeCkePU9rHfMklmhuLFnpeq/EJZk2IhStY6NzqgjOkg==,
+      }
+    dependencies:
+      "@ts-morph/common": 0.22.0
+      code-block-writer: 12.0.0
+    dev: true
+
   /tty-table@4.2.3:
     resolution:
       {
@@ -6499,6 +6540,15 @@ packages:
       is-typed-array: 1.1.12
     dev: true
 
+  /typescript@5.2.2:
+    resolution:
+      {
+        integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==,
+      }
+    engines: { node: ">=14.17" }
+    hasBin: true
+    dev: true
+
   /typescript@5.3.3:
     resolution:
       {
@@ -6621,7 +6671,7 @@ packages:
       he: 1.2.0
     dev: true
 
-  /vue-tsc@1.8.27(typescript@5.3.3):
+  /vue-tsc@1.8.27(typescript@5.2.2):
     resolution:
       {
         integrity: sha512-WesKCAZCRAbmmhuGl3+VrdWItEvfoFIPXOvUJkjULi+x+6G/Dy69yO3TBRJDr9eUlmsNAwVmxsNZxvHKzbkKdg==,
@@ -6631,9 +6681,9 @@ packages:
       typescript: "*"
     dependencies:
       "@volar/typescript": 1.11.1
-      "@vue/language-core": 1.8.27(typescript@5.3.3)
+      "@vue/language-core": 1.8.27(typescript@5.2.2)
       semver: 7.5.4
-      typescript: 5.3.3
+      typescript: 5.2.2
     dev: true
 
   /walker@1.0.8:
