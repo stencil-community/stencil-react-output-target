@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "format": "prettier . --write",
-    "publish-packages": "turbo run build lint test --filter=stencil-react-output-target && changeset version && changeset publish"
+    "publish-packages": "turbo run build lint test --filter=@stencil-community/react-output-target && changeset version && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.24.4",

@@ -1,12 +1,12 @@
-import { dashToPascalCase, eventListenerName } from "./utils/string-utils";
+import { dashToPascalCase, eventListenerName } from './utils/string-utils';
 import type {
   Config,
   OutputTargetDistCustomElements,
   BuildCtx,
   CompilerCtx,
   OutputTarget,
-} from "@stencil/core/internal";
-import { Project, VariableDeclarationKind } from "ts-morph";
+} from '@stencil/core/internal';
+import { Project, VariableDeclarationKind } from 'ts-morph';
 
 export interface ReactOutputTargetOptions {
   /**
@@ -24,16 +24,16 @@ interface ReactEvent {
 export const reactOutputTarget = ({
   outputPath,
 }: ReactOutputTargetOptions): OutputTarget => {
-  let customElementsDir = "dist/components";
+  let customElementsDir = 'dist/components';
 
   let stencilPackageName: string;
 
   return {
-    type: "custom",
-    name: "react-output-target",
+    type: 'custom',
+    name: 'react-output-target',
     validate(config: Config) {
       const customElementsOutputTarget = (config.outputTargets || []).find(
-        (o) => o.type === "dist-custom-elements",
+        (o) => o.type === 'dist-custom-elements',
       ) as OutputTargetDistCustomElements;
       if (customElementsOutputTarget == null) {
         throw new Error(
@@ -50,14 +50,14 @@ export const reactOutputTarget = ({
 
       if (config.sys && config.packageJsonFilePath) {
         const { name: packageName } = JSON.parse(
-          config.sys.readFileSync(config.packageJsonFilePath, "utf8"),
+          config.sys.readFileSync(config.packageJsonFilePath, 'utf8'),
         );
         stencilPackageName = packageName;
       }
 
       if (!stencilPackageName) {
         throw new Error(
-          "Unable to find the package name in the package.json file: " +
+          'Unable to find the package name in the package.json file: ' +
             config.packageJsonFilePath,
         );
       }
@@ -98,7 +98,7 @@ const createComponent = <T extends HTMLElement, E extends Record<string, EventNa
               alias: `${reactTagName}Element`,
             },
             {
-              name: "defineCustomElement",
+              name: 'defineCustomElement',
               alias: `define${reactTagName}`,
             },
           ],
@@ -155,8 +155,8 @@ const createComponent = <T extends HTMLElement, E extends Record<string, EventNa
           name: componentEventNamesType,
           type:
             events.length > 0
-              ? `{ ${events.map((e) => `${e.name}: ${e.type}`).join(",\n")} }`
-              : "NonNullable<unknown>",
+              ? `{ ${events.map((e) => `${e.name}: ${e.type}`).join(',\n')} }`
+              : 'NonNullable<unknown>',
         });
 
         const statement = sourceFile.addVariableStatement({
@@ -170,7 +170,7 @@ const createComponent = <T extends HTMLElement, E extends Record<string, EventNa
               react: React,
               events: { ${events
                 .map((e) => `${e.name}: '${e.originalName}'`)
-                .join(",\n")}} as ${componentEventNamesType},
+                .join(',\n')}} as ${componentEventNamesType},
               defineCustomElement: define${reactTagName}
             })`,
             },

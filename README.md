@@ -14,6 +14,13 @@ The Stencil React Output Target simplifies the process for Stencil web component
 
 </p>
 
+<p align="center">
+  <a href="https://github.com/sean-perkins/stencil-react-output-target/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Stencil React Output Target is released under the MIT license." />
+  </a>
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+</p>
+
 ## Installation
 
 ```bash
@@ -25,17 +32,17 @@ npm install @stencil-community/react-output-target --save-dev
 ### Add the output target to your Stencil config
 
 ```ts
-import { Config } from "@stencil/core";
-import { reactOutputTarget } from "@stencil/react-output-target";
+import { Config } from '@stencil/core';
+import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
-  namespace: "mycomponent",
+  namespace: 'mycomponentlibrary',
   outputTargets: [
     {
-      type: "dist-custom-elements",
+      type: 'dist-custom-elements',
     },
     reactOutputTarget({
-      outputPath: "../react-demo/src/components/react-components.ts",
+      outputPath: '../react-demo/src/components/react-components.ts',
     }),
   ],
 };
@@ -45,18 +52,20 @@ export const config: Config = {
 
 ### Install the `@lit/react` package in your React app
 
+The generated React components depend on the `@lit/react` package.
+
 ```bash
 npm install @lit/react --save
 ```
 
-### Install the Stencil library in your React app
+### Install the Stencil library in your React app or library
 
-The React application should have a dependency to your Stencil library. This can be done by installing the npm package of your Stencil library from the registry or using symlink.
+The React application should have a dependency to your Stencil library. This can be done with a variety approaches, including installing the npm package from the registry, symbolic linking, or using a tool like pnpm workspaces.
 
-### Use the React components in your React app
+### Use the React components in your React app or library
 
 ```tsx
-import { MyComponent } from "./components/react-components";
+import { MyComponent } from './components/react-components';
 
 export const App = () => {
   return (

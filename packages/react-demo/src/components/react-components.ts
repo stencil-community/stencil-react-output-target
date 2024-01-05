@@ -1,18 +1,18 @@
-import type { EventName } from "@lit/react";
-import { createComponent as createComponentWrapper, Options } from "@lit/react";
-import React from "react";
+import type { EventName } from '@lit/react';
+import { createComponent as createComponentWrapper, Options } from '@lit/react';
+import React from 'react';
 import {
   type MyButtonCustomEvent,
   type MyStencilComplexEvent,
-} from "stencil-demo";
+} from 'stencil-demo';
 import {
   defineCustomElement as defineMyButton,
   MyButton as MyButtonElement,
-} from "stencil-demo/dist/components/my-button.js";
+} from 'stencil-demo/dist/components/my-button.js';
 import {
   defineCustomElement as defineMyComponent,
   MyComponent as MyComponentElement,
-} from "stencil-demo/dist/components/my-component.js";
+} from 'stencil-demo/dist/components/my-component.js';
 
 const createComponent = <
   T extends HTMLElement,
@@ -21,7 +21,7 @@ const createComponent = <
   defineCustomElement,
   ...options
 }: Options<T, E> & { defineCustomElement: () => void }) => {
-  if (typeof defineCustomElement !== "undefined") {
+  if (typeof defineCustomElement !== 'undefined') {
     defineCustomElement();
   }
   return createComponentWrapper<T, E>(options);
@@ -33,12 +33,12 @@ type MyButtonEvents = {
 };
 
 export const MyButton = createComponent<MyButtonElement, MyButtonEvents>({
-  tagName: "my-button",
+  tagName: 'my-button',
   elementClass: MyButtonElement,
   react: React,
   events: {
-    onStencilClick: "stencilClick",
-    onStencilComplexClick: "stencilComplexClick",
+    onStencilClick: 'stencilClick',
+    onStencilComplexClick: 'stencilComplexClick',
   } as MyButtonEvents,
   defineCustomElement: defineMyButton,
 });
@@ -49,7 +49,7 @@ export const MyComponent = createComponent<
   MyComponentElement,
   MyComponentEvents
 >({
-  tagName: "my-component",
+  tagName: 'my-component',
   elementClass: MyComponentElement,
   react: React,
   events: {} as MyComponentEvents,
