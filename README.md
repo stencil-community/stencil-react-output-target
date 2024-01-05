@@ -33,7 +33,7 @@ npm install @stencil-community/react-output-target --save-dev
 
 ```ts
 import { Config } from '@stencil/core';
-import { reactOutputTarget } from '@stencil/react-output-target';
+import { reactOutputTarget } from '@stencil-community/react-output-target';
 
 export const config: Config = {
   namespace: 'mycomponentlibrary',
