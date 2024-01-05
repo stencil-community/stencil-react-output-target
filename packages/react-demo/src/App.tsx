@@ -5,7 +5,13 @@ function App() {
   return (
     <>
       <MyComponent first="John" last="Doe" />
-      <MyButton onStencilClick={(res) => console.log('hello', res.detail.data)}>
+      <MyButton
+        onStencilComplexClick={(ev) => {
+          // This event is not actually emitted by the component
+          console.log('complex click', ev.detail);
+        }}
+        onStencilClick={(res) => console.log('hello', res.detail.data)}
+      >
         Click me
       </MyButton>
     </>
