@@ -15,9 +15,7 @@ The Stencil React Output Target simplifies the process for Stencil web component
 </p>
 
 <p align="center">
-  <a href="https://github.com/sean-perkins/stencil-react-output-target/blob/main/LICENSE" style="text-decoration:none">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Stencil React Output Target is released under the MIT license." />
-  </a>
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Stencil React Output Target is released under the MIT license." />
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
 </p>
 
