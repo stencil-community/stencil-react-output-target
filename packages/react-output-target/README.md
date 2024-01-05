@@ -1,6 +1,18 @@
-# Stencil React Output Target
+<p align="center">
+  <a href="#">
+    <img alt="Stencil React Output Trget" src="https://github.com/sean-perkins/stencil-react-output-target/blob/main/.github/logo.png?raw=true" width="60" />
+  </a>
+</p>
+
+<h1 align="center">
+  Stencil React Output Target
+</h1>
+
+<p align="center">
 
 The Stencil React output target is a [Stencil](https://stenciljs.com) output target to generate React component wrappers. This packages makes use of the [`@lit/react`](https://www.npmjs.com/package/@lit/react) package to generate the React components from your Stencil components.
+
+</p>
 
 ## Installation
 
